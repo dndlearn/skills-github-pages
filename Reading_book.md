@@ -12,8 +12,15 @@ Merging: Combining changes from different branches.
 after the merge
 ![Branch Diagram](https://x.com/DeRonin_/article/2033587293064204349)
 
-LLM concept:
+## LLM concept:
+A vocabulary is created by retaining all unique words across both sentences
+<img width="1339" height="658" alt="image" src="https://github.com/user-attachments/assets/d1bfa2ab-31c9-4b9c-811b-cf54f2a43a94" />
 
+Using our vocabulary, we simply count how often a word in each sentence
+appears, quite literally creating a bag of words. As a result, a bag-of-words
+model aims to create representations of text in the form of numbers, also
+called vectors or vector representations, observed in Figure 1-5. Throughout
+the book, we refer to these kinds of models as representation models.
 
 ## How the Vector Values standardly work:
 -1 (Present): A value of 1 means that word exists in the input sentence.Words present: is, cute, my, cat $\rightarrow$ mapped to [1, 1, 1, 1].   
