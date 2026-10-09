@@ -89,3 +89,5 @@ For numerical tabular data:
 
 1. **Raw Numerical Row** $\rightarrow$ Arrayed directly into a dense numerical vector $\mathbf{x} = [x_1, x_2, \dots, x_d]$.
 2. **Preprocessing/Scaling** $\rightarrow$ Standardized to ensure all vector dimensions occupy comparable magnitudes.
+
+## Embeddings are vector representations of data that attempt to capture its meaning
