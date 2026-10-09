@@ -1,0 +1,12 @@
+## One chart is better than hundreds words
+
+-- Understand the branch
+Key Concepts:
+
+main Branch: Usually the trusted working version, and the first branch. (historically called master)
+Feature Branch: A safe isolated space to develop without affecting the trusted version.
+Merging: Combining changes from different branches.
+![Branch Diagram](https://x.com/DeRonin_/article/2033587293064204349)
+
+after the merge
+https://x.com/DeRonin_/article/2033587293064204349
