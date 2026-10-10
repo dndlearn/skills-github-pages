@@ -100,4 +100,10 @@ many layers where each connection has a certain weight depending on the input. T
 <img width="1124" height="311" alt="image" src="https://github.com/user-attachments/assets/8232d912-953d-4a34-97f7-3fda6b47b770" />
 #### As illustrated in Figure 1-8, embeddings can have many properties to represent the meaning of a word. Since the size of embeddings is fixed, their properties are chosen to create a mental representation of the word.
 <img width="1114" height="545" alt="image" src="https://github.com/user-attachments/assets/4f17630e-4b73-4b47-ba0d-4324482f6110" />
+### The Encoder (The Listener / Compressor)
+What it does: It takes in raw, complex data (like a long sentence, a paragraph, or an image) and reads it from start to finish.
+In AI terms: It converts the input into a dense, compressed list of numbers (an embedding vector) that captures the core meaning.
+<img width="1123" height="834" alt="image" src="https://github.com/user-attachments/assets/c69c191f-64aa-4358-8bfb-428a1bb22571" />
 
+### The Decoder (The Speaker / Generator)
+What it does: It takes that compressed summary from the encoder and unpacks it to generate a brand-new output (like the same sentence translated into English, or a reply to a question) word by word. In AI terms: It starts with the encoded meaning and predicts the next best word or pixel repeatedly until the final output is complete.
