@@ -27,6 +27,9 @@ the book, we refer to these kinds of models as representation models.
 -0 (Absent): A value of 0 means that word does not appear in the input sentence.Words absent: that, a, dog $\rightarrow$ mapped to [0, 0, 0].   
 <img width="1341" height="737" alt="image" src="https://github.com/user-attachments/assets/b7a6a5e7-f797-4c2b-abc5-13ebda0aaa6a" />
 在机器学习中，该词通常指一种专门的计算技术，它将复杂的、高维度的类别数据——如文字、图像或用户 ID——映射到一个连续的、低维度的向量空间中，并通过几何距离来捕捉数据之间的语义关系。)
+embedding has multiple forms - document, sentence, words
+<img width="1099" height="773" alt="image" src="https://github.com/user-attachments/assets/4b3e85bf-020a-426d-bb95-2662e218edcb" />
+
 ## for tabular data processing
 In tabular data, the input features are already numerical, so **vectorization means grouping these numerical values into a single row vector (or mathematical array) for each observation.**
 
