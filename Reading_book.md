@@ -95,4 +95,6 @@ neural networks can have
 many layers where each connection has a certain weight depending on the input. These weights are often referred to as the parameters of the model.The resulting embeddings capture the meaning of words but what exactly does that mean? To illustrate this phenomenon, let’s somewhat oversimplify and imagine we have embeddings of several words, namely “apple” and “baby.” Embeddings attempt to capture meaning by representing the properties of words. For instance, the word “baby” might score high on the properties “newborn” and “human” while the word “apple” scores low on these properties.
 <img width="1102" height="742" alt="image" src="https://github.com/user-attachments/assets/95efb0c0-bf00-4178-a9c8-128c9e3fb890" />
 <img width="1124" height="311" alt="image" src="https://github.com/user-attachments/assets/8232d912-953d-4a34-97f7-3fda6b47b770" />
+#### As illustrated in Figure 1-8, embeddings can have many properties to represent the meaning of a word. Since the size of embeddings is fixed, their properties are chosen to create a mental representation of the word.
+<img width="1114" height="545" alt="image" src="https://github.com/user-attachments/assets/4f17630e-4b73-4b47-ba0d-4324482f6110" />
 
