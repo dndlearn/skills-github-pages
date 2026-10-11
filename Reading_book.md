@@ -107,3 +107,7 @@ In AI terms: It converts the input into a dense, compressed list of numbers (an 
 
 ### The Decoder (The Speaker / Generator)
 What it does: It takes that compressed summary from the encoder and unpacks it to generate a brand-new output (like the same sentence translated into English, or a reply to a question) word by word. In AI terms: It starts with the encoded meaning and predicts the next best word or pixel repeatedly until the final output is complete.
+
+#### In 2014, a solution called attention was introduced that highly
+improved upon the original architecture.4 Attention allows a model to focus on parts of the input sequence that are relevant to one another (“attend” to each other) and amplify their signal, as shown in Figure 1-14.
+<img width="1106" height="556" alt="image" src="https://github.com/user-attachments/assets/9d139d48-1a03-412a-9222-c1ab45237277" />
