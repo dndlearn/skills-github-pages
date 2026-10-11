@@ -125,4 +125,34 @@ This architecture and training procedure makes BERT and related architectures in
 <img width="1092" height="531" alt="image" src="https://github.com/user-attachments/assets/d309baa3-1ca5-4479-904f-b0f10b5e1cae" />
 Similar to the encoder-only architecture of BERT, a decoder-only architecture was proposed in 2018 to target generative tasks.7 This architecture was called a Generative Pre-trained Transformer (GPT) for its generative capabilities (it’s now known as GPT-1 to distinguish it from later versions).
 
+### Think of a **GPT** (Generative Pre-trained Transformer) like an incredibly well-read autocomplete engine.
 
+Instead of just predicting the next single word in a text message, it can write entire essays, code, analyze data, and hold conversations.
+
+The name breaks down into three simple parts:
+
+---
+
+### 1. Generative (The Creator)
+
+* **What it means:** It doesn't just sort or classify data (like telling you if an email is spam); it **creates brand-new content**.
+* **Plain English:** It generates original sentences, stories, answers, or computer code piece by piece based on what you ask it to do.
+
+### 2. Pre-trained (The Student)
+
+* **What it means:** Before you ever talk to it, the AI goes through a massive schooling phase where it reads a staggering amount of text from the internet—books, articles, code, and conversations.
+* **Plain English:** It starts its life having already "read" human history, language, and culture. It learns grammar, facts, reasoning patterns, and coding syntax *before* you give it a single prompt.
+
+### 3. Transformer (The Brain Architecture)
+
+* **What it means:** This is the specific type of AI design (built on **attention mechanisms**) that looks at a whole sentence at once rather than just one word at a time.
+* **Plain English:** Imagine reading a long paragraph. When you reach the end, you still remember context from the beginning. The Transformer architecture allows the AI to track how words relate to each other over long distances, ensuring the conversation stays coherent and context-aware.
+
+---
+
+### How It Works in Practice
+
+When you type a prompt, the GPT doesn't "think" or feel emotions. It simply looks at everything you wrote, relies on its massive pre-trained memory, and calculates **the statistically most likely next word**—then repeats that process until the response is finished.
+<img width="1112" height="626" alt="image" src="https://github.com/user-attachments/assets/c56eea5e-9a1d-4cb9-aa63-e02f9b89513b" />
+
+### These generative decoder-only models, especially the “larger” models, are commonly referred to as large language models (LLMs).
