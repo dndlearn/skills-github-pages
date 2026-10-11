@@ -239,3 +239,6 @@ In addition to the loop, two key internal components are the tokenizer and the l
 
 the tokenizer’s vocabulary. The model has a vector representation associated with each of these tokens in the vocabulary (token embeddings). Figure 3-5
 shows both the vocabulary and associated token embeddings for a model with a vocabulary of 50,000 tokens.
+
+<img width="1113" height="568" alt="image" src="https://github.com/user-attachments/assets/04957978-7a27-4c90-ae19-8a6935022afc" />
+
