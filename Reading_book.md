@@ -235,3 +235,7 @@ number of tokens the model can process, as shown in Figure 1-27.
 <img width="1105" height="497" alt="image" src="https://github.com/user-attachments/assets/256647e2-700d-4b3a-b545-70660f9185c3" />
 
 In addition to the loop, two key internal components are the tokenizer and the language modeling head (LM head). The tokenizer is followed by the neural network: a stack of Transformer blocks that do all of the processing. That stack is then followed by the LM head, which translates the output of the stack into probability scores for what the most likely next token is.
+<img width="1073" height="703" alt="image" src="https://github.com/user-attachments/assets/933408fd-29cd-4ba7-8378-8652a15d9817" />
+
+the tokenizer’s vocabulary. The model has a vector representation associated with each of these tokens in the vocabulary (token embeddings). Figure 3-5
+shows both the vocabulary and associated token embeddings for a model with a vocabulary of 50,000 tokens.
