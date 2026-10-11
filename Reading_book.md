@@ -267,3 +267,15 @@ The **temperature** parameter controls how "creative" or random the model's choi
 
 * **Pros:** It is entirely deterministic. If you run the same prompt with $T = 0$ multiple times, you will get the exact same output every single time. It is great for tasks requiring strict consistency, logic, or code generation.
 * **Cons:** It can lead to repetitive phrasing, loops, or overly safe, bland text because the model never takes a chance on a lower-probability (but more creative or interesting) word choice.
+
+A Transformer block (Figure 3-12) is made up of two successive components:
+1. The attention layer is mainly concerned with incorporating relevant information from other input tokens and positions
+2. The feedforward layer houses the majority of the model’s processing capacity
+   <img width="1075" height="456" alt="image" src="https://github.com/user-attachments/assets/dea857cd-0d31-4ccd-abe9-97e9e6789a6d" />
+The feedforward neural network (collectively in all the model layers) is the source of this information, as Figure 3-13 shows. When the model was
+successfully trained to model a massive text archive (which included many mentions of “The Shawshank Redemption”), it learned and stored the
+information (and behaviors) that make it succeed at this task.
+<img width="1077" height="830" alt="image" src="https://github.com/user-attachments/assets/fbe45b1e-5b97-422c-876e-50de696ebd91" />
+
+
+
