@@ -277,5 +277,14 @@ successfully trained to model a massive text archive (which included many mentio
 information (and behaviors) that make it succeed at this task.
 <img width="1077" height="830" alt="image" src="https://github.com/user-attachments/assets/fbe45b1e-5b97-422c-876e-50de696ebd91" />
 
+Attention is a mechanism that helps the model incorporate context as it’s processing a specific token. Think of the following prompt: 
+* “The dog chased the squirrel because it”
+For the model to predict what comes after “it,” it needs to know what “it” refers to. Does it refer to the dog or the squirrel?
+In a trained Transformer LLM, the attention mechanism makes that determination. Attention adds information from the context into the
+representation of the “it” token. We can see a simple version of that in Figure 3-14.
+<img width="1110" height="633" alt="image" src="https://github.com/user-attachments/assets/51965d7a-08c2-4885-9e00-6ae0a2583160" />
+Two main steps are involved in the attention mechanism:
+1. A way to score how relevant each of the previous input tokens are to the current token being processed (in the pink arrow).
+2. Using those scores, we combine the information from the various positions into a single output vector.
 
 
