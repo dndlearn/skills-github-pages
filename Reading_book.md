@@ -111,3 +111,9 @@ What it does: It takes that compressed summary from the encoder and unpacks it t
 #### In 2014, a solution called attention was introduced that highly
 improved upon the original architecture.4 Attention allows a model to focus on parts of the input sequence that are relevant to one another (“attend” to each other) and amplify their signal, as shown in Figure 1-14.
 <img width="1106" height="556" alt="image" src="https://github.com/user-attachments/assets/9d139d48-1a03-412a-9222-c1ab45237277" />
+2017 paper release - attention is all you needed. 
+The encoder block in the Transformer consists of two parts, self-attention and a feedforward neural network, which are shown in Figure 1-17. Compared to previous methods of attention, self-attention can attend to different positions within a single sequence, thereby more easily and accurately representing the input sequence as illustrated in Figure 1-18.
+<img width="1076" height="844" alt="image" src="https://github.com/user-attachments/assets/aa0de73d-76de-4eb2-83b7-680e2123453c" />
+<img width="1085" height="550" alt="image" src="https://github.com/user-attachments/assets/a7791a2b-ae91-4e32-9f54-6d3fbe663548" />
+
+
