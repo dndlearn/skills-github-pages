@@ -232,3 +232,6 @@ number of tokens the model can process, as shown in Figure 1-27.
 <img width="1084" height="433" alt="image" src="https://github.com/user-attachments/assets/15dc6a0b-5147-406d-a0b2-dc85952c854b" />
 
 ### Transformer output words one by one. This gives us a more accurate picture of the model as it is simply predicting the next token based on an input prompt. Software around the neural network basically runs it in a loop to sequentially expand the generated text until completion.
+<img width="1105" height="497" alt="image" src="https://github.com/user-attachments/assets/256647e2-700d-4b3a-b545-70660f9185c3" />
+
+In addition to the loop, two key internal components are the tokenizer and the language modeling head (LM head). The tokenizer is followed by the neural network: a stack of Transformer blocks that do all of the processing. That stack is then followed by the LM head, which translates the output of the stack into probability scores for what the most likely next token is.
