@@ -156,3 +156,7 @@ When you type a prompt, the GPT doesn't "think" or feel emotions. It simply look
 <img width="1112" height="626" alt="image" src="https://github.com/user-attachments/assets/c56eea5e-9a1d-4cb9-aa63-e02f9b89513b" />
 
 ### These generative decoder-only models, especially the “larger” models, are commonly referred to as large language models (LLMs).
+A vital part of these completion models is something called the context length or context window. The context length represents the maximum
+number of tokens the model can process, as shown in Figure 1-27.
+<img width="1119" height="525" alt="image" src="https://github.com/user-attachments/assets/97355793-a13b-4cc4-8ca2-d1fe05f1fa89" />
+
