@@ -228,3 +228,7 @@ A vital part of these completion models is something called the context length o
 number of tokens the model can process, as shown in Figure 1-27.
 <img width="1119" height="525" alt="image" src="https://github.com/user-attachments/assets/97355793-a13b-4cc4-8ca2-d1fe05f1fa89" />
 
+### after tokenization,  The next piece of the puzzle is finding the best numerical representation for these tokens that the model can use to calculate and properly model the patterns in the text. Before the beginning of the training process, these vectors are randomly initialized like the rest of the model’s weights, but the training process assigns them the values that enable the useful behavior they’re trained to perform.
+<img width="1084" height="433" alt="image" src="https://github.com/user-attachments/assets/15dc6a0b-5147-406d-a0b2-dc85952c854b" />
+
+### Transformer output words one by one. This gives us a more accurate picture of the model as it is simply predicting the next token based on an input prompt. Software around the neural network basically runs it in a loop to sequentially expand the generated text until completion.
