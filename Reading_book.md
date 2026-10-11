@@ -244,5 +244,26 @@ shows both the vocabulary and associated token embeddings for a model with a voc
 What this means for the example in Figure 3-7 is that if the token “Dear” has a 40% probability of being the next token, then it has a 40% chance of
 being picked (instead of greedy search, which would pick it directly for having the highest score).
 <img width="1067" height="608" alt="image" src="https://github.com/user-attachments/assets/b63a4948-d715-452c-adeb-e6484e9a2ccb" />
+Choosing the highest scoring token every time is called greedy decoding. It’s what happens if you set the temperature parameter to zero in an LLM.
+That statement describes how an LLM determines its output step-by-step during text generation.
 
+### How It Works
 
+* **The Token Selection Process:** At every step of generating a response, an LLM calculates a probability distribution over its entire vocabulary for what the next token (word or piece of a word) should be.
+* **Greedy Decoding:** When you use **greedy decoding**, the model always picks the single token with the highest probability score, completely ignoring any other plausible alternatives.
+
+---
+
+### The Role of Temperature ($T = 0$)
+
+The **temperature** parameter controls how "creative" or random the model's choices are by scaling the probability scores before selection:
+
+1. **Higher Temperature ($T > 0$):** Flattens the distribution, making lower-scoring tokens more likely to be chosen. This introduces variety and creativity into the model's responses.
+2. **Zero Temperature ($T = 0$):** Effectively removes randomness. It sharpens the distribution so infinitely more weight is placed on the top-ranking token, forcing the model to default to **greedy decoding**.
+
+---
+
+### Pros and Cons
+
+* **Pros:** It is entirely deterministic. If you run the same prompt with $T = 0$ multiple times, you will get the exact same output every single time. It is great for tasks requiring strict consistency, logic, or code generation.
+* **Cons:** It can lead to repetitive phrasing, loops, or overly safe, bland text because the model never takes a chance on a lower-probability (but more creative or interesting) word choice.
