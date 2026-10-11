@@ -115,5 +115,8 @@ improved upon the original architecture.4 Attention allows a model to focus on p
 The encoder block in the Transformer consists of two parts, self-attention and a feedforward neural network, which are shown in Figure 1-17. Compared to previous methods of attention, self-attention can attend to different positions within a single sequence, thereby more easily and accurately representing the input sequence as illustrated in Figure 1-18.
 <img width="1076" height="844" alt="image" src="https://github.com/user-attachments/assets/aa0de73d-76de-4eb2-83b7-680e2123453c" />
 <img width="1085" height="550" alt="image" src="https://github.com/user-attachments/assets/a7791a2b-ae91-4e32-9f54-6d3fbe663548" />
+Decoder in attention 
+<img width="1105" height="807" alt="image" src="https://github.com/user-attachments/assets/ec4c438f-fb52-4ae5-a02d-2bfb7aad7f2b" />
+
 
 
