@@ -118,7 +118,10 @@ The encoder block in the Transformer consists of two parts, self-attention and a
 ### Decoder in attention 
 <img width="1105" height="807" alt="image" src="https://github.com/user-attachments/assets/ec4c438f-fb52-4ae5-a02d-2bfb7aad7f2b" />
 This architecture and training procedure makes BERT and related architectures incredible at representing contextual language. BERT-like
-models are commonly used for transfer learning, which involves first pretraining it for language modeling and then fine-tuning it for a specific task. This architecture and training procedure makes BERT and related architectures incredible at representing contextual language. BERT-like models are commonly used for transfer learning, which involves first pretraining it for language modeling and then fine-tuning it for a specific task. For instance, by training BERT on the entirety of Wikipedia, it learns to understand the semantic and contextual nature of text.
+models are commonly used for transfer learning, which involves first pretraining it for language modeling and then fine-tuning it for a specific task. 
+<img width="1122" height="491" alt="image" src="https://github.com/user-attachments/assets/8767629e-a5f3-4858-b3c0-dd4914b8627b" />
+
+This architecture and training procedure makes BERT and related architectures incredible at representing contextual language. BERT-like models are commonly used for transfer learning, which involves first pretraining it for language modeling and then fine-tuning it for a specific task. For instance, by training BERT on the entirety of Wikipedia, it learns to understand the semantic and contextual nature of text.
 <img width="1092" height="531" alt="image" src="https://github.com/user-attachments/assets/d309baa3-1ca5-4479-904f-b0f10b5e1cae" />
 Similar to the encoder-only architecture of BERT, a decoder-only architecture was proposed in 2018 to target generative tasks.7 This architecture was called a Generative Pre-trained Transformer (GPT) for its generative capabilities (it’s now known as GPT-1 to distinguish it from later versions).
 
