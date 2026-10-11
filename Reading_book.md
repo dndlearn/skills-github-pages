@@ -241,4 +241,8 @@ the tokenizer’s vocabulary. The model has a vector representation associated w
 shows both the vocabulary and associated token embeddings for a model with a vocabulary of 50,000 tokens.
 
 <img width="1113" height="568" alt="image" src="https://github.com/user-attachments/assets/04957978-7a27-4c90-ae19-8a6935022afc" />
+What this means for the example in Figure 3-7 is that if the token “Dear” has a 40% probability of being the next token, then it has a 40% chance of
+being picked (instead of greedy search, which would pick it directly for having the highest score).
+<img width="1067" height="608" alt="image" src="https://github.com/user-attachments/assets/b63a4948-d715-452c-adeb-e6484e9a2ccb" />
+
 
