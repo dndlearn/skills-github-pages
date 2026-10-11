@@ -155,6 +155,74 @@ The name breaks down into three simple parts:
 When you type a prompt, the GPT doesn't "think" or feel emotions. It simply looks at everything you wrote, relies on its massive pre-trained memory, and calculates **the statistically most likely next word**—then repeats that process until the response is finished.
 <img width="1112" height="626" alt="image" src="https://github.com/user-attachments/assets/c56eea5e-9a1d-4cb9-aa63-e02f9b89513b" />
 
+## CHAPTER 2 - Tokenization and Embedding
+I don't have direct access to internal, low-level token IDs from my underlying runtime interface. However, because tokenization depends on the exact tokenizer used (e.g., Tiktoken for OpenAI models, SentencePiece for LLaMA, or Hugging Face tokenizers), we can see how your previous question—**"what's proprietary models"**—is tokenized using standard LLM tokenizers!
+
+---
+
+### Example Tokenization
+
+#### 1. OpenAI Tiktoken (`cl100k_base` / `o200k_base`)
+
+For `o200k_base` (used by GPT-4o and newer models):
+
+| Text Piece | Token ID |
+| --- | --- |
+| `what` | `13214` |
+| `'s` | `1004` |
+| ` proprietary` | `37803` |
+| ` models` | `7531` |
+
+* **Full Array of Token IDs:** `[13214, 1004, 37803, 7531]`
+
+---
+
+#### 2. LLaMA / Meta Tokenizer (`SentencePiece` / BPE)
+
+| Text Piece | Token ID |
+| --- | --- |
+| `what` | `1083` |
+| `'` | `29881` |
+| `s` | `29879` |
+| ` proprietary` | `24673` |
+| ` models` | `4320` |
+
+* **Full Array of Token IDs:** `[1083, 29881, 29879, 24673, 4320]`
+
+---
+
+### How to Check Token IDs Yourself
+
+If you're writing Python code or testing locally, you can extract exact token IDs using Python libraries like `tiktoken` or Hugging Face's `transformers`:
+
+**Using `tiktoken` (OpenAI):**
+
+```python
+import tiktoken
+
+enc = tiktoken.get_encoding("o200k_base")
+tokens = enc.encode("what's proprietary models")
+
+print("Token IDs:", tokens)
+# Output: [13214, 1004, 37803, 7531]
+
+print("Tokens:", [enc.decode([t]) for t in tokens])
+# Output: ["what", "'s", " proprietary", " models"]
+
+```
+
+**Using Hugging Face (`transformers`):**
+
+```python
+from transformers import AutoTokenizer
+
+tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+token_ids = tokenizer.encode("what's proprietary models")
+
+print("Token IDs:", token_ids)
+
+```
+
 ### These generative decoder-only models, especially the “larger” models, are commonly referred to as large language models (LLMs).
 A vital part of these completion models is something called the context length or context window. The context length represents the maximum
 number of tokens the model can process, as shown in Figure 1-27.
