@@ -286,5 +286,6 @@ representation of the “it” token. We can see a simple version of that in Fig
 Two main steps are involved in the attention mechanism:
 1. A way to score how relevant each of the previous input tokens are to the current token being processed (in the pink arrow).
 2. Using those scores, we combine the information from the various positions into a single output vector.
+<img width="1169" height="564" alt="image" src="https://github.com/user-attachments/assets/794a503d-b7b8-4994-88ce-1612a907f94d" />
 
 
