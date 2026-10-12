@@ -299,3 +299,12 @@ These matrices contain the information of the input tokens projected to three di
 1. Relevance scoring
 2. Combining information
 <img width="1097" height="782" alt="image" src="https://github.com/user-attachments/assets/1e0a20df-102d-4cbe-a7e3-411524f8f70b" />
+
+In a generative Transformer, we’re generating one token at a time. This means we’re processing one position at a time. So the attention mechanism
+here is only concerned with this one position, and how information from other positions can be pulled in to inform this position.
+The relevance scoring step of attention is conducted by multiplying the query vector of the current position with the keys matrix. This produces a
+score stating how relevant each previous token is. Passing that by a softmax operation normalizes these scores so they sum up to 1. Figure 3-20 shows
+the relevance score resulting from this calculation.
+<img width="1058" height="769" alt="image" src="https://github.com/user-attachments/assets/7c79aeee-a7ad-4223-bb0c-a399bbfd53a0" />
+<img width="1078" height="847" alt="image" src="https://github.com/user-attachments/assets/d1ff576e-8455-4aeb-905d-967f8b08c9b2" />
+
