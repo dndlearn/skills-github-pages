@@ -288,4 +288,7 @@ Two main steps are involved in the attention mechanism:
 2. Using those scores, we combine the information from the various positions into a single output vector.
 <img width="1169" height="564" alt="image" src="https://github.com/user-attachments/assets/794a503d-b7b8-4994-88ce-1612a907f94d" />
 
-
+The training process produces three projection matrices that produce the components that interact in this calculation:
+* A query projection matrix
+* A key projection matrix
+* A value projection matrix
