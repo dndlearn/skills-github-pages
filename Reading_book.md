@@ -292,3 +292,10 @@ The training process produces three projection matrices that produce the compone
 * A query projection matrix
 * A key projection matrix
 * A value projection matrix
+Attention starts by multiplying the inputs by the projection matrices to create three new matrices. These are called the queries, keys, and values
+matrices.
+
+These matrices contain the information of the input tokens projected to three different spaces that help carry out the two steps of attention:
+1. Relevance scoring
+2. Combining information
+<img width="1097" height="782" alt="image" src="https://github.com/user-attachments/assets/1e0a20df-102d-4cbe-a7e3-411524f8f70b" />
