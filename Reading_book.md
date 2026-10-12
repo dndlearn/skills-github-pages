@@ -307,4 +307,33 @@ score stating how relevant each previous token is. Passing that by a softmax ope
 the relevance score resulting from this calculation.
 <img width="1058" height="769" alt="image" src="https://github.com/user-attachments/assets/7c79aeee-a7ad-4223-bb0c-a399bbfd53a0" />
 <img width="1078" height="847" alt="image" src="https://github.com/user-attachments/assets/d1ff576e-8455-4aeb-905d-967f8b08c9b2" />
+For example, select Head 1 · Reference relationship, with Full / bidirectional attention:
+1. Find the “she” row.
+2. Move across to the “customer” column.
+3. The cell is approximately 68%: when updating the representation of “she,” this illustrative head gives most of its attention to “customer.”
+Read across a row—not down a column. Each row distributes 100% of its attention across the available tokens. Displayed percentages may differ slightly from 100% because of rounding.
+These weights control a blend of value vectors:
+\[
+\text{Updated representation of “she”}
+=\sum_j \text{attention weight}_{\text{she},j}\times \text{value vector}_j
+\]
+With causal attention, cells to the right of the diagonal show “—”: a token cannot attend to later tokens. The remaining weights are normalized to total 100%.
+The demo uses hand-designed weights to illustrate the mechanism. A high weight indicates a strong contribution to this head’s computation; it does not by itself prove causality or explain the final prediction.
+<img width="1447" height="739" alt="image" src="https://github.com/user-attachments/assets/7e9c85b5-a6a8-45db-8141-be49f39dca4b" />
+## Summary
+Transformer 大语言模型（LLM）每次生成一个 Token。
+生成的 Token 会被追加到提示词（prompt）末尾，随后更新后的提示词再次输入模型进行前向传播，以生成下一个 Token。
+Transformer LLM 的三大核心组件包括：分词器（tokenizer）、堆叠的 Transformer 模块（Transformer blocks）以及语言建模头（language modeling head）。
+分词器包含了模型的 Token 词表，模型则拥有与这些 Token 对应的 Token 嵌入（embeddings）。
+将文本拆分为 Token 并使用这些 Token 的嵌入，是 Token 生成过程的第一步。
+前向传播过程会依次流经各个阶段。
+在流程接近尾声时，语言建模头会针对下一个可能的 Token 计算概率得分。解码策略决定了在当前生成步骤中实际选择哪个 Token 作为输出（通常选择概率最高的 Token，但不总是如此）。
+Transformer 表现优异的一个原因在于其并行处理 Token 的能力。每个输入 Token 都会进入各自的处理通道或数据流。通道数量即模型的“上下文长度”（context size），代表了模型能够处理的最大 Token 数量。
+由于 Transformer LLM 采用循环方式逐个生成 Token，缓存每一步的处理结果是个好主意，这样可以避免重复计算（这些结果以各种矩阵的形式存储在各层之中）。
+大部分处理工作都在 Transformer 模块内部进行。
+这些模块由两个组件构成。其中之一是前馈神经网络（feedforward neural network），它能够存储信息，并基于训练数据进行预测和插值。
+Transformer 模块的第二个主要组件是注意力层（attention layer）。注意力机制整合了上下文信息，使模型能够更好地捕捉语言的细微差别。
+注意力机制的运作包含两个主要步骤：(1) 评估相关性得分，以及 (2) 整合信息。 Transformer 的注意力层并行执行多项注意力操作，每项操作都在一个注意力头（attention head）内进行，最终将各头的输出汇总，构成该注意力层的整体输出。
+通过在所有注意力头（或各组注意力头，即“分组查询注意力”/grouped-query attention）之间共享键（key）和值（value）矩阵，可以加速注意力计算。
+诸如 Flash Attention 之类的方法，通过优化 GPU 不同存储系统上的操作执行方式，从而提升了注意力计算的速度。
 
