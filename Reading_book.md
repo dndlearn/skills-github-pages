@@ -306,6 +306,9 @@ The relevance scoring step of attention is conducted by multiplying the query ve
 score stating how relevant each previous token is. Passing that by a softmax operation normalizes these scores so they sum up to 1. Figure 3-20 shows
 the relevance score resulting from this calculation.
 <img width="1058" height="769" alt="image" src="https://github.com/user-attachments/assets/7c79aeee-a7ad-4223-bb0c-a399bbfd53a0" />
+## 2 stages of training model
+<img width="953" height="520" alt="image" src="https://github.com/user-attachments/assets/e6bcece7-0527-44fc-85fe-8e0fb0173779" />
+
 <img width="1078" height="847" alt="image" src="https://github.com/user-attachments/assets/d1ff576e-8455-4aeb-905d-967f8b08c9b2" />
 For example, select Head 1 · Reference relationship, with Full / bidirectional attention:
 1. Find the “she” row.
