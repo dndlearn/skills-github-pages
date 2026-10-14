@@ -70,7 +70,56 @@ Rescales values into a fixed bound (typically $[0, 1]$):
 
 $$x' = \frac{x - x_{\min}}{x_{\max} - x_{\min}}$$
 
+```python
+import numpy as np
+from sklearn.preprocessing import StandardScaler
 
+# We need to know the population mean and standard deviation, or apply standard scaling to a dataset where this vector belongs. 
+# Wait, standard scaling is typically applied to a dataset (columns). If x is just a single vector given without a dataset, 
+# standard scaling requires mean and standard deviation. Let's see if the user implies a dataset or if standard scaling needs a hypothetical context, 
+# or perhaps standard scaling is applied element-wise across the vector if treated as a single sample? No, standard scaling is feature-wise.
+# Let's write a python script to handle standard scaling or explain the requirement. 
+# Usually, standard scaling transforms features: z = (x - mean) / std. 
+# Since we only have a single vector x = [25, 50000, 720], standard scaling across features would mean each element is treated as an independent feature (mean=25, std=0 for 1 sample, which is undefined or results in 0).
+# Let's check if there's any implicit context, or if standard scaling requires more samples.
+print("Standard scaling requires a set of samples to compute mean and standard deviation for each feature.")
+
+
+```
+
+```text
+Standard scaling requires a set of samples to compute mean and standard deviation for each feature.
+
+
+```
+
+To perform **Standard Scaling** (Z-score normalization), a dataset of multiple samples is typically required so that the **mean ($\mu$)** and **standard deviation ($\sigma$)** can be calculated for each feature.
+
+The formula for standard scaling is:
+
+
+$$z = \frac{x - \mu}{\sigma}$$
+
+Because your vector represents a single sample with three independent features—such as **Age ($25$)**, **Income ($50,000$)**, and **Credit Score ($720$)**—standard scaling cannot be calculated on this single vector alone without knowing the population or dataset parameters ($\mu$ and $\sigma$ for each feature).
+
+---
+
+### How it works with a dataset example:
+
+Suppose your vector belongs to a dataset with the following feature averages and standard deviations:
+
+| Feature | Your Value ($x$) | Dataset Mean ($\mu$) | Dataset Std Dev ($\sigma$) | Scaled Result ($z$) |
+| --- | --- | --- | --- | --- |
+| **Feature 1** (e.g., Age) | $25$ | $35$ | $10$ | $\frac{25 - 35}{10} = \mathbf{-1.0}$ |
+| **Feature 2** (e.g., Income) | $50,000$ | $60,000$ | $15,000$ | $\frac{50000 - 60000}{15000} \approx \mathbf{-0.67}$ |
+| **Feature 3** (e.g., Credit Score) | $720$ | $700$ | $50$ | $\frac{720 - 700}{50} = \mathbf{+0.4}$ |
+
+Resulting scaled vector:
+
+
+$$\mathbf{x_{scaled}} = \begin{bmatrix} -1.0 \\ -0.67 \\ +0.4 \end{bmatrix}$$
+
+If you have a specific dataset or training set from which these statistics are derived, feel free to share them, and the exact scaled values can be computed for you!
 
 ---
 
